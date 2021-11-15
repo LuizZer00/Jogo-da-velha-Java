@@ -22,19 +22,19 @@ public class Principal {
 		while(true) {
 		  System.out.println("\nSair(0) - Escolha a dificuldade(1,2,3): ");
 		  op = entrada.nextInt();
-		//condicional: se o valor digitado for menor que zero e maior que três, pede outro numero
+		//condicional: se o valor digitado for menor que zero e maior que trÃªs, pede outro numero
 		  if(op < 0 || op >3) {
-			System.out.println("Por Favor, Digite um número válido!!");
+			System.out.println("Por Favor, Digite um nÃºmero vÃ¡lido!!");
 			
 		  }
 		//codicional: se valor digitado for zero 
 		  if(op == 0) {
 			//chama o metodo de fim de programa
 			jogo.fimProg();  
-			//Imprime Informações sobre o trabalho
+			//Imprime InformaÃ§Ãµes sobre o trabalho
 			System.out.println("Desenvolvido por: Luiz Vinicius de Souza Lara");
-			System.out.println("RU: 3424873");
-			System.out.println("Disciplina: Programação Orientada a Objetos");
+			System.out.println("RU: #######");
+			System.out.println("Disciplina: ProgramaÃ§Ã£o Orientada a Objetos");
 			System.out.println("Professor: Leonardo Gomes");
 		    //e finaliza o programa
 			System.exit(0);;
@@ -44,7 +44,7 @@ public class Principal {
 		  if(op == 1) {
 			 //Instancio a Sub-Classe: ComputadorA
 			ComputadorA computadorA = new ComputadorA();
-			//Laço verdadeiro até o jogo finalizar
+			//LaÃ§o verdadeiro atÃ© o jogo finalizar
 		    while(true) {
 		    	//a cada jogada meu contador recebe mais um
 		    	jogo.cont += 1;
@@ -59,33 +59,33 @@ public class Principal {
 		        //chamando o metodo de mostrar o jogo
 		        jogo.mostrar();
 		        
-		        //Minha variavel sit(situação) vai receber o metodo validaJogo da classe jogo
+		        //Minha variavel sit(situaÃ§Ã£o) vai receber o metodo validaJogo da classe jogo
 				String sit = jogo.validaJogo();
-				//imprimi a situação do jogo na tela
+				//imprimi a situaÃ§Ã£o do jogo na tela
 				System.out.println(sit);
-				//Condicional: se a situação for igual a: Você é vencedor
-				if(sit == "Você é o vencedor!!") {
+				//Condicional: se a situaÃ§Ã£o for igual a: VocÃª Ã© vencedor
+				if(sit == "VocÃª Ã© o vencedor!!") {
 					//incremento um na variavel vitorias
 					jogo.vit += 1;  
 					//volto meu contador de jogadas no valor inicial
 					jogo.cont = 1;
 					//chamo o metodo de zerar o jogo
 					jogo.zerar();
-					//encerro meu laço e volto para o menu
+					//encerro meu laÃ§o e volto para o menu
 					break;
 				}
-				//Condicional: se a minha sitação for igual a: Você perdeu
-				else if(sit == "Você Perdeu!!") {
+				//Condicional: se a minha sitaÃ§Ã£o for igual a: VocÃª perdeu
+				else if(sit == "VocÃª Perdeu!!") {
 					//incremento um na variavel derrotas
 					jogo.der += 1;
 					//volto meu contador de jogadas no valor inicial
 					jogo.cont = 1;
 					//chamo o metodo de zerar o jogo
 					jogo.zerar();
-					//encerro meu laço e volto para o menu
+					//encerro meu laÃ§o e volto para o menu
 					break;
 			   }
-				//Condicional: se meu contador for igual a seis e ainda não obtive um ganhador
+				//Condicional: se meu contador for igual a seis e ainda nÃ£o obtive um ganhador
 				else if(jogo.cont == 6) {
 				   //incremento um na variavel de empates
 				   jogo.emp += 1;
@@ -95,14 +95,14 @@ public class Principal {
 				   System.out.println("Empate!!");
 				   //chamo o metodo de zerar o jogo
 				   jogo.zerar();
-				  //encerro meu laço e volto para o menu
+				  //encerro meu laÃ§o e volto para o menu
 				   break;
 		  }}}
 		 //Condicional: se valor digitado for dois
 		if(op == 2) {
 			//instancio a Sub-Classe ComputadorB
 			ComputadorB computadorB = new ComputadorB();
-			//laço verdadeiro ate o jogo finalizar
+			//laÃ§o verdadeiro ate o jogo finalizar
 		    while(true) {
 		    	//contador de jogadas incrementa um
 		    	jogo.cont += 1;
@@ -112,7 +112,7 @@ public class Principal {
 			    //chamando o metodo de mostrar o jogo
 	            jogo.mostrar();
 	            
-	            //se meu contador for menor que seis, ou seja: meu jogo ainda não finalizou
+	            //se meu contador for menor que seis, ou seja: meu jogo ainda nÃ£o finalizou
 	            if(jogo.cont < 6) {
 	            //chama o metodo de jogada do ComputadorB
 		        computadorB.jogada(jogo);
@@ -120,34 +120,34 @@ public class Principal {
 		        //chama o metodo de mostrar o jogo
 		        jogo.mostrar();
 	            }
-	          //imprimi a situação do jogo na tela
+	          //imprimi a situaÃ§Ã£o do jogo na tela
 	            String sit = jogo.validaJogo();
 		       
 	            System.out.println(sit);
-	          //Condicional: se a situação for igual a: Você é vencedor
-				if(sit == "Você é o vencedor!!") {
+	          //Condicional: se a situaÃ§Ã£o for igual a: VocÃª Ã© vencedor
+				if(sit == "VocÃª Ã© o vencedor!!") {
 					//incremento um na variavel vitorias
 					jogo.vit += 1;
 					//volto meu contador de jogadas no valor inicial
 					jogo.cont = 1;
 					//chamo o metodo de zerar o jogo
 					jogo.zerar();
-					//encerro meu laço e volto para o menu
+					//encerro meu laÃ§o e volto para o menu
 					break;
 				}
-				//Condicional: se a minha sitação for igual a: Você perdeu
-				else if(sit == "Você Perdeu!!") {
+				//Condicional: se a minha sitaÃ§Ã£o for igual a: VocÃª perdeu
+				else if(sit == "VocÃª Perdeu!!") {
 					//incremento um na variavel derrotas
 					jogo.der += 1;
 					//volto meu contador de jogadas no valor inicial
 					jogo.cont = 1;
 					//chamo o metodo de zerar o jogo
 					jogo.zerar();
-					//encerro meu laço e volto para o menu
+					//encerro meu laÃ§o e volto para o menu
 					break;
 				
 			   }
-				//Condicional: se meu contador for igual a seis e ainda não obtive um ganhador
+				//Condicional: se meu contador for igual a seis e ainda nÃ£o obtive um ganhador
 				else if(jogo.cont == 6) {
 				   //incremento um na variavel de empates
 				   jogo.emp += 1;
@@ -157,16 +157,16 @@ public class Principal {
 				   System.out.println("Empate!!");
 				   //chamo o metodo ade zerar o jogo
 				   jogo.zerar();
-				   //encerro meu laço e volto para o menu
+				   //encerro meu laÃ§o e volto para o menu
 				   break;
 				   
 				   
 			   }}}
-		//Condicional: se o numero digitado for três
+		//Condicional: se o numero digitado for trÃªs
 		if(op == 3) {
 			//Instancio a Sub-Classe: ComputadorC
 			ComputadorC computadorC = new ComputadorC();
-			//Laço verdadeiro até o jogo finalizar
+			//LaÃ§o verdadeiro atÃ© o jogo finalizar
 		    while(true) {
 		    	//a cada jogada meu contador recebe mais um
 		    	jogo.cont += 1;
@@ -181,12 +181,12 @@ public class Principal {
 		      //chamando o metodo de mostrar o jogo
 		        jogo.mostrar();
 		        
-		        //Minha variavel sit(situação) vai receber o metodo validaJogo da classe jogo
+		        //Minha variavel sit(situaÃ§Ã£o) vai receber o metodo validaJogo da classe jogo
 				String sit = jogo.validaJogo();
-				//imprimi a situação do jogo na tela
+				//imprimi a situaÃ§Ã£o do jogo na tela
 				System.out.println(sit);
-				//Condicional: se a situação for igual a: Você é vencedor
-				if(sit == "Você é o vencedor!!") {
+				//Condicional: se a situaÃ§Ã£o for igual a: VocÃª Ã© vencedor
+				if(sit == "VocÃª Ã© o vencedor!!") {
 					//incremento um na variavel vitorias
 					jogo.vit += 1;
 					//volto meu contador de jogadas no valor inicial
@@ -194,21 +194,21 @@ public class Principal {
 					//chamo o metodo de zerar o jogo
 					jogo.zerar();
 					jogo.zerar();
-					//encerro meu laço e volto para o menu
+					//encerro meu laÃ§o e volto para o menu
 					break;
 				}
-				//Condicional: se a minha sitação for igual a: Você perdeu
-				else if(sit == "Você Perdeu!!") {
+				//Condicional: se a minha sitaÃ§Ã£o for igual a: VocÃª perdeu
+				else if(sit == "VocÃª Perdeu!!") {
 					//incremento um na variavel derrotas
 					jogo.der += 1;
 					//volto meu contador de jogadas no valor inicial
 					jogo.cont = 1;
 					//chamo o metodo de zerar o jogo
 					jogo.zerar();
-					//encerro meu laço e volto para o menu
+					//encerro meu laÃ§o e volto para o menu
 					break;
 				 }
-				//Condicional: se meu contador for igual a seis e ainda não obtive um ganhador
+				//Condicional: se meu contador for igual a seis e ainda nÃ£o obtive um ganhador
 				else if(jogo.cont == 6) {
 				   //incremento um na variavel de empates
 				   jogo.emp += 1;
@@ -218,7 +218,7 @@ public class Principal {
 				   System.out.println("Empate!!");
 				 //chamo o metodo de zerar o jogo
 				   jogo.zerar();
-				   //encerro meu laço e volto para o menu
+				   //encerro meu laÃ§o e volto para o menu
 				   break;
 				   
 				   
